@@ -7,7 +7,7 @@ const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
-  title: 'CRM Data Warehouse Modernization',
+  title: 'CRM Data Warehousing',
   description:
     'Interactive architecture dashboard: the CRM data journey from MySQL XDBS/ODM sources through Bronze, Silver, and Gold layers to business insights.',
   generator: 'v0.app',
