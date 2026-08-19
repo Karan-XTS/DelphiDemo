@@ -157,7 +157,7 @@ export function PipelineFlow({
               onClick={() => {
                 if (stage.id === 'insights') {
                   window.open(
-                    'https://workdrive.zoho.in/file/2ra500749bea3867c448c842cb21598ca85d0?authId=%7B%22entity_id%22%3A%221796053670297111410%22%2C%22module%22%3A%22Chats%22%7D',
+                    'delphi_combined.html',
                     '_blank'
                   )
                 } else {
