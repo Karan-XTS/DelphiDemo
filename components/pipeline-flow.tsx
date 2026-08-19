@@ -59,7 +59,7 @@ const stages: Stage[] = [
     subtitle: 'Routes Data to Delphi',
     tone: 'azure',
     icon: BarChart3,
-    clickable: false,
+    clickable: true,
   },
 ]
 
@@ -154,7 +154,16 @@ export function PipelineFlow({
               {stage.clickable ? (
                 <button
                   type="button"
-                  onClick={() => onSelectLayer(stage.id as LayerId)}
+                  onClick={() => {
+                  if (stage.id === 'insights') {
+                    window.open(
+                      'https://workdrive.zoho.in/file/2ra500749bea3867c448c842cb21598ca85d0?authId=%7B%22entity_id%22%3A%221796053670297111410%22%2C%22module%22%3A%22Chats%22%7D',
+                      '_blank'
+                    )
+                  } else {
+                    onSelectLayer(stage.id as LayerId)
+                  }
+                }}
                   className="block w-full rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   {content}
