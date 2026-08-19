@@ -157,7 +157,7 @@ export function PipelineFlow({
               onClick={() => {
                 if (stage.id === 'insights') {
                   window.open(
-                    'delphi_combined.html',
+                    '/delphi_combined.html',
                     '_blank'
                   )
                 } else {
