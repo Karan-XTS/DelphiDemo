@@ -59,7 +59,7 @@ const stages: Stage[] = [
     subtitle: 'Routes Data to Delphi',
     tone: 'azure',
     icon: BarChart3,
-    clickable: false,
+    clickable: true,
   },
 ]
 
@@ -152,13 +152,22 @@ export function PipelineFlow({
               style={{ animationDelay: `${i * 90}ms` }}
             >
               {stage.clickable ? (
-                <button
-                  type="button"
-                  onClick={() => onSelectLayer(stage.id as LayerId)}
-                  className="block w-full rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  {content}
-                </button>
+                          <button
+              type="button"
+              onClick={() => {
+                if (stage.id === 'insights') {
+                  window.open(
+                    '/delphi_combined.html',
+                    '_blank'
+                  )
+                } else {
+                  onSelectLayer(stage.id as LayerId)
+                }
+              }}
+              className="block w-full rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              {content}
+            </button>
               ) : (
                 content
               )}

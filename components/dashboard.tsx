@@ -41,7 +41,7 @@ export function Dashboard() {
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight text-foreground text-balance md:text-2xl">
-                CRM Data Warehouse Modernization
+                CRM Data Warehousing
               </h1>
               <p className="text-sm text-muted-foreground">
                 Sources → Bronze → Silver → Gold → Insights
